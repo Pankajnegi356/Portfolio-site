@@ -399,8 +399,7 @@ body:has(a:hover) .cursor-ring, body:has(button:hover) .cursor-ring {
 /* ═══════════════════════════════════════
    ABOUT
 ═══════════════════════════════════════ */
-.section-inner.about-inner,
-#about .section-inner {
+.about-grid {
   display: grid;
   grid-template-columns: 1fr 1.2fr 1fr;
   gap: 4rem;
@@ -425,7 +424,7 @@ body:has(a:hover) .cursor-ring, body:has(button:hover) .cursor-ring {
   display: inline-block;
 }
 .about-text { color: var(--text-2); line-height: 1.8; margin-bottom: 1.5rem; font-size: 0.95rem; }
-.stats-row { display: flex; gap: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border); }
+.stats-row { display: flex; gap: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border); flex-wrap: wrap; }
 .stat { display: flex; flex-direction: column; }
 .stat-num {
   font-family: var(--font-serif);
@@ -1020,6 +1019,7 @@ body:has(a:hover) .cursor-ring, body:has(button:hover) .cursor-ring {
   max-width: 600px;
   position: relative;
   overflow: hidden;
+  padding: 1.5rem 2rem;
 }
 .cert-card::before {
   content: '';
@@ -1137,23 +1137,26 @@ footer {
   .word-rotator-wrap { left: 2.5rem; }
 }
 @media (max-width: 640px) {
-  .section { padding: 5rem 1.5rem; }
-  #hero { padding: 0 1.5rem; }
+  .section { padding: 5rem 1.2rem; }
+  #hero { padding: 0 1.2rem; }
   .exp-item { grid-template-columns: 1fr; gap: 0.5rem; }
   .exp-item-num { font-size: 1.8rem; color: rgba(124,92,252,0.2); }
   .exp-item-top { flex-direction: column; }
   .exp-item-meta { align-items: flex-start; }
-  .proj-tabbar { gap: 0.3rem; }
+  .proj-tabbar { gap: 0.3rem; flex-wrap: wrap; }
   .proj-tab { min-width: auto; padding: 0.5rem 0.8rem; flex: 1; }
   .tab-name { font-size: 0.7rem; }
-  .proj-split { padding: 1.5rem; }
-  .proj-num-bg { font-size: 4rem; }
+  .proj-split { padding: 1.2rem; }
+  .proj-num-bg { font-size: 3.5rem; }
   .skills-grid { grid-template-columns: 1fr; }
   .footer-inner { flex-direction: column; gap: 0.5rem; text-align: center; }
+  footer { padding: 2rem 1.2rem; }
   .scroll-hint { display: none; }
-  .cert-card { flex-direction: column; text-align: center; }
-  .contact-link { grid-template-columns: 1fr; gap: 0.3rem; }
+  .cert-card { flex-direction: column; text-align: center; gap: 1rem; padding: 1.5rem; }
+  .contact-link { grid-template-columns: 1fr auto; gap: 0.5rem; padding: 1.5rem 0.5rem; }
   .cl-label { display: none; }
-  .word-rotator-wrap { left: 1.5rem; font-size: 1rem; }
+  .word-rotator-wrap { left: 1.2rem; font-size: 0.9rem; }
+  .top-left { font-size: 0.75rem; }
+  .top-btn { padding: 0.4rem 0.8rem; font-size: 0.65rem; }
 }
 
